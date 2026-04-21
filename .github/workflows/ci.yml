@@ -1,0 +1,23 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build-and-test:
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@v4
+      - name: Select latest Xcode (Swift 6)
+        run: |
+          latest=$(ls -d /Applications/Xcode_*.app 2>/dev/null | sort -V | tail -1)
+          echo "Picked: $latest"
+          sudo xcode-select -switch "$latest/Contents/Developer"
+          swift --version
+      - name: Build
+        run: swift build -v
+      - name: Test
+        run: swift test -v
