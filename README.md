@@ -130,7 +130,7 @@ Adding your own component is straightforward: add a `case` to `ComponentView` in
 - ✅ Action buttons with path-bound labels / event names — stay disabled until both resolve
 - ✅ Idempotent `createSurface` (safe to re-emit for the same surface id, e.g. on server-side fallback)
 
-### Progressive-rendering RFC ([a2ui-progressive-rendering-rfc](https://github.com/vpm238/a2ui-progressive-rendering-rfc-rfc))
+### Progressive-rendering RFC ([a2ui-progressive-rendering-rfc](https://github.com/vpm238/a2ui-progressive-rendering-rfc))
 
 This library implements all three draft proposals ahead of spec:
 
@@ -156,4 +156,4 @@ MIT. See [LICENSE](LICENSE).
 - [google/A2UI](https://github.com/google/A2UI) — upstream repo and other renderers
 - [`a2ui-skills-swiftui`](https://github.com/vpm238/a2ui-skills-swiftui) — client-side skill runtime built on this renderer
 - [`a2ui-starter-swiftui`](https://github.com/vpm238/a2ui-starter-swiftui) — reference app using both
-- [`a2ui-progressive-rendering-rfc`](https://github.com/vpm238/a2ui-progressive-rendering-rfc-rfc) — RFC + demo for streaming UX primitives, all three implemented here
+- [`a2ui-progressive-rendering-rfc`](https://github.com/vpm238/a2ui-progressive-rendering-rfc) — RFC + demo for streaming UX primitives, all three implemented here
