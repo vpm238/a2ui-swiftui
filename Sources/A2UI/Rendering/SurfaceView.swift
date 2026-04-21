@@ -37,9 +37,16 @@ struct ComponentView: View {
             let rationaleStreaming = streamingFlag(raw["rationale"])
             switch type {
             case "Column":          ColumnView(props: resolvedObj, surface: surface)
+            case "Row":             RowView(props: resolvedObj, surface: surface)
             case "Text":            A2UITextView(props: resolvedObj, streamingCaret: textStreaming)
             case "Button":          A2UIButtonView(props: resolvedObj)
+            case "Link":            A2UILinkView(props: resolvedObj)
             case "Card":            CardView(props: resolvedObj, surface: surface)
+            case "Divider":         DividerView(props: resolvedObj)
+            case "Image":           A2UIImageView(props: resolvedObj)
+            case "Badge":           BadgeView(props: resolvedObj)
+            case "TextField":       A2UITextFieldView(props: resolvedObj)
+            case "ProgressBar":     ProgressBarView(props: resolvedObj)
             case "OptionsGrid":     OptionsGridView(props: resolvedObj)
             case "RichMessageCard": RichMessageCardView(props: resolvedObj,
                                                         headlineStreaming: headlineStreaming,
