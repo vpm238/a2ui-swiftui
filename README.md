@@ -2,7 +2,9 @@
 
 **A native Swift / SwiftUI renderer for the [A2UI](https://a2ui.org/) protocol.** iOS, macOS, visionOS.
 
-A2UI is Google's open protocol that lets AI agents describe UI declaratively; clients render it using native widgets. A2UI has shipped reference renderers for Flutter, Lit, Angular, and React. This is the first one for Apple platforms.
+A2UI is Google's open protocol that lets AI agents describe UI declaratively; clients render it using native widgets. A2UI ships reference renderers for Flutter, Lit, Angular, and React, and the community has contributed Vue and [another SwiftUI renderer](https://github.com/sunnypurewal/a2ui-swiftui) covering the full basicCatalog.
+
+**This renderer's focus is different:** a small, opinionated component set — including two agent-specific patterns (`OptionsGrid`, `RichMessageCard`) — built around end-to-end support for the three [progressive-rendering primitives](https://github.com/vpm238/a2ui-progressive-rendering-rfc) (pending shimmer, streaming flag, append patch op) for streaming LLM output. Pairs with [`a2ui-skills-swiftui`](https://github.com/vpm238/a2ui-skills-swiftui) for a full client-side agent.
 
 ## Install
 
